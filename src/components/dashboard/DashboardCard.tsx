@@ -12,8 +12,8 @@ export default function DashboardCard() {
   return (
     <Card className="bg-secondary p-4 pb-0">
       <CardContent>
-        <h3 className="text-3xl text-center mb-4 font-bold">Posts</h3>
-        <div className="flex gap-5 justify-center items-center">
+        <h3 className="mb-4 text-center text-3xl font-bold">Posts</h3>
+        <div className="flex items-center justify-center gap-5">
           <Newspaper className="h-20 w-20" />
           <h3 className="text-5xl font-semibold">200</h3>
         </div>

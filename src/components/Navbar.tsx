@@ -13,7 +13,7 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="bg-primary py-2 px-5 flex justify-between">
+    <nav className="flex justify-between bg-primary px-5 py-2">
       <Link href="/">
         <Image src={mario} alt="mario" width={40} />
       </Link>
