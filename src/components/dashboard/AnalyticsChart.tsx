@@ -7,24 +7,15 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import data from "@/data/analytics";
 
 export default function AnalyticsChart() {
-  console.log(data);
   return (
     <>
       <Card>
         <CardHeader>
-          <CardTitle>Analytics For This year</CardTitle>
-          <CardDescription>Views Per Month</CardDescription>
+          <CardTitle>Monthly Views</CardTitle>
         </CardHeader>
         <CardContent>
           <div style={{ width: "100%", height: "300px" }}>
@@ -38,9 +29,6 @@ export default function AnalyticsChart() {
             </ResponsiveContainer>
           </div>
         </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
       </Card>
     </>
   );
