@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import posts from "@/data/posts";
+import { useToast } from "@/components/ui/use-toast";
 
 const formSchema = z.object({
   title: z.string().min(1, { message: "Title is required" }),
@@ -30,6 +31,7 @@ interface PostEditPageProps {
   };
 }
 export default function PostEditPage({ params }: PostEditPageProps) {
+  const { toast } = useToast();
   const post = posts.find((post) => post.id === params.id);
 
   // 1. Define your form.
@@ -44,7 +46,10 @@ export default function PostEditPage({ params }: PostEditPageProps) {
   });
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
+    toast({
+      title: "Success!",
+      description: "Post updated successfully.",
+    });
   };
 
   return (
