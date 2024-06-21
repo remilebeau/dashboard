@@ -10,6 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navbar() {
   return (
@@ -17,6 +18,8 @@ export default function Navbar() {
       <Link href="/">
         <Image src={mario} alt="mario" width={40} />
       </Link>
+
+      <ThemeToggle />
 
       <DropdownMenu>
         <DropdownMenuTrigger className="focus:outline-none">
